@@ -57,7 +57,7 @@ function userOrders() {
       <Heading text={"All Orders"} textAlign="text-left" />
       <div className="w-2/3 justify-between grid grid-cols-2 ">
         <label className="text-sm font-medium text-gray-900 block mb-2 px-3 ">
-          <h4>Filter</h4>
+          <h1>Filter</h1>
         </label>
       </div>
       <div className="w-2/3 items-center grid grid-cols-2 ">
