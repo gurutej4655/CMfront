@@ -69,13 +69,13 @@ function SellerProducts() {
       {/* Table Header */}
       <Heading text={"Your Products"} textAlign="text-left" />
       <div className="w-full flex flex-col gap-2 md:flex-row items-center justify-between px-4">
-        <div className="w-full">
-          <div className="w-2/3 justify-between grid grid-cols-2 ">
+        <div className="w-1/2">
+          <div className="w-3/4 justify-between grid grid-cols-2 ">
             <label className="text-sm font-medium text-gray-900 block mb-2 px-3 ">
               Filter
             </label>
           </div>
-          <div className="w-2/3 items-center grid grid-cols-2 ">
+          <div className="w-3/4 items-center grid grid-cols-2 ">
             <select
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 mx-1 "
               required
