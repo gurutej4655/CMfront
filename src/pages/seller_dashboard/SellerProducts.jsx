@@ -22,6 +22,7 @@ function SellerProducts() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const [data, setData] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const [isDataUpdated, setIsDataUpdated] = useState(false);
   const [isDataFetching, setIsDataFetching] = useState(true);
@@ -42,10 +43,19 @@ function SellerProducts() {
     }
   };
 
+  const handleFilter = async (e) => {
+    let updatedData = products.filter(
+      (item) => item.category === e.target.value || e.target.value === "all"
+    );
+    setData(updatedData);
+  };
+
   // API to GET Data
   const getProducts = async () => {
     let productData = await getAPI(`product/getProductData/${sellerData._id}`);
     setData(productData);
+    //console.log(productData);
+    setProducts(productData);
     setIsDataFetching(false);
   };
 
@@ -59,12 +69,32 @@ function SellerProducts() {
       {/* Table Header */}
       <Heading text={"Your Products"} textAlign="text-left" />
       <div className="w-full flex flex-col gap-2 md:flex-row items-center justify-between px-4">
-        <div className="mt-1 relative w-full  md:w-96">
-          <input
-            type="text"
-            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-            placeholder="Search for products"
-          />
+        <div className="w-full">
+          <div className="w-2/3 justify-between grid grid-cols-2 ">
+            <label className="text-sm font-medium text-gray-900 block mb-2 px-3 ">
+              Filter
+            </label>
+          </div>
+          <div className="w-2/3 items-center grid grid-cols-2 ">
+            <select
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 mx-1 "
+              required
+              onChange={(e) => handleFilter(e)}
+            >
+              <option value="All" disabled selected>
+                Filter Products
+              </option>
+              <option value="rice">Rice</option>
+              <option value="wheat">Wheat</option>
+              <option value="nuts">Nuts</option>
+              <option value="sugar">Sugar</option>
+              <option value="spices">Spices</option>
+              <option value="fruits">Fruits</option>
+              <option value="vegetables">Vegetables</option>
+              <option value="pulses">Pulses</option>
+              <option value="all">All</option>
+            </select>
+          </div>
         </div>
         <Link to="product/add" className="w-full md:w-fit text-center">
           <div className="text-md py-2 px-4 text-white rounded cursor-pointer bg-sky-700">
