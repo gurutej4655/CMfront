@@ -55,8 +55,8 @@ function userOrders() {
     <>
       {/* Table Header */}
       <Heading text={"All Orders"} textAlign="text-left" />
-      <div className="w-2/3 justify-between grid grid-cols-2 ">
-        <label className="text-sm font-medium text-gray-900 block mb-2 px-3 ">
+      <div className="w-2/3 justify-between grid grid-cols-2 px-3">
+        <label className="text-sm font-medium text-gray-900 block mb-2  ">
           Filter
         </label>
       </div>
