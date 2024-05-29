@@ -11,6 +11,8 @@ import { useSelector } from "react-redux";
 
 function userOrders() {
   const [data, setData] = useState([]);
+  const [orderedData, setOrderedData] = useState([]);
+
   const navigate = useNavigate();
 
   const userData = useSelector((state) => state.userReducer);
@@ -19,9 +21,10 @@ function userOrders() {
 
   // API to GET Data
   const getOrders = async () => {
-    let orderedData = await getAPI(`order/getuserorder/${userData.email}`);
-    console.log("Orders", orderedData);
-    setData(orderedData);
+    let orders = await getAPI(`order/getuserorder/${userData.email}`);
+    //console.log("Orders", orderedData);
+    setOrderedData(orders);
+    setData(orders);
     setIsDataFetching(false);
   };
 
@@ -36,18 +39,41 @@ function userOrders() {
     getOrders();
   }, []);
 
+  const handleFilter = async (e) => {
+    let flag = 4;
+    if (e.target.value === "Delivered") flag = 3;
+    else if (e.target.value === "Shipped") flag = 2;
+    else if (e.target.value === "Pending") flag = 1;
+    const updatedData = await orderedData.filter(
+      (item) => item.isShipped === flag || flag === 4
+    );
+    setData(updatedData);
+    console.log(data, flag);
+  };
+
   return (
     <>
       {/* Table Header */}
       <Heading text={"All Orders"} textAlign="text-left" />
-      <div className="w-full flex flex-col gap-2 md:flex-row items-center justify-between px-4">
-        <div className="mt-1 relative w-full  md:w-96">
-          <input
-            type="text"
-            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-            placeholder="Search for products"
-          />
-        </div>
+      <div className="w-2/3 justify-between grid grid-cols-2 ">
+        <label className="text-sm font-medium text-gray-900 block mb-2 px-3 ">
+          Filter
+        </label>
+      </div>
+      <div className="w-2/3 items-center grid grid-cols-2 ">
+        <select
+          className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 mx-1 "
+          required
+          onChange={(e) => handleFilter(e)}
+        >
+          <option value="All" disabled selected>
+            Filter Orders
+          </option>
+          <option value="Delivered">Delivered</option>
+          <option value="Shipped">Shipped</option>
+          <option value="Pending">Pending</option>
+          <option value="All">All</option>
+        </select>
       </div>
 
       {/* Table */}
