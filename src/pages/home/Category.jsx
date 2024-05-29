@@ -8,49 +8,49 @@ function Category() {
       <Link to={"/category/rice"}>
         <CategoryCard
           title="Rice"
-          image="https://source.unsplash.com/xmuIgjuQG0M"
+          image="categories/rice.jpg"
         />
       </Link>
       <Link to={"/category/wheat"}>
         <CategoryCard
           title="Wheat"
-          image="https://source.unsplash.com/joOVC9d-jis"
+          image="categories/wheat.jpg"
         />
       </Link>
       <Link to={"/category/nuts"}>
         <CategoryCard
           title="Nuts"
-          image="https://source.unsplash.com/UhrHTmVBzzE"
+          image="categories/nut.jpg"
         />
       </Link>
       <Link to={"/category/sugar"}>
         <CategoryCard
           title="Sugar"
-          image="https://source.unsplash.com/u_Mwofs_zu0"
+          image="categories/sugar.jpg"
         />
       </Link>
       <Link to={"/category/spices"}>
         <CategoryCard
           title="Spices"
-          image="https://source.unsplash.com/uaHShoIDGeo"
+          image="categories/spices.jpg"
         />
       </Link>
       <Link to={"/category/fruits"}>
         <CategoryCard
           title="Fruits"
-          image="https://source.unsplash.com/M_xIaxQE3Ms"
+          image="categories/fruits.jpg"
         />
       </Link>
       <Link to={"/category/vegetables"}>
         <CategoryCard
           title="Vegetables"
-          image="https://source.unsplash.com/5aJVJvJ9rG8"
+          image="categories/veg.jpg"
         />
       </Link>
       <Link to={"/category/pulses"}>
         <CategoryCard
           title="Pulses"
-          image="https://source.unsplash.com/TUf3H3vRlNU"
+          image="categories/pulses.jpg"
         />
       </Link>
     </div>

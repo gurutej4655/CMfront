@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Cart from "../../pages/cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,7 +31,6 @@ function Navbar() {
   const [showSellerDropdown, setShowSellerDropdown] = useState(false);
 
   useEffect(() => {
-    console.log("UserData SellerData", userData, sellerData);
     function handleClickOutside(event) {
       if (
         userDropdownRef.current &&
@@ -62,7 +62,7 @@ function Navbar() {
 
   return (
     <nav className="bg-white border-gray-200 shadow">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-4 md:px-12 h-12">
+      <div className="flex flex-wrap items-center  justify-between mx-auto px-4 md:px-12 h-12 ">
         <a
           onClick={(e) => {
             if (!sellerData) {
@@ -72,8 +72,8 @@ function Navbar() {
           className="flex items-center"
         >
           <span className="text-xl md:text-2xl font-medium whitespace-nowrap">
-            <span className="text-red-500 font-bold">C</span>rop
-            <span className="text-red-500 font-bold">C</span>onnect
+            <span className="text-black-500 font-bold">Crop</span>
+            <span className="text-lime-600 font-bold">Market</span>
           </span>
         </a>
         <div className="flex flex-row gap-4 md:gap-8 text-2xl md:text-3xl">
@@ -157,7 +157,7 @@ function Navbar() {
                 </span>
               ) : (
                 <span className="text-sm font-medium hidden md:block">
-                  User
+                  Seller
                 </span>
               )}
               {sellerData && (

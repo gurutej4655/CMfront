@@ -370,7 +370,7 @@ function LoginAndSignup() {
         ></div>
         <img
           className="mx-auto w-full h-full"
-          src="https://source.unsplash.com/random/?farms"
+          src="https://w0.peakpx.com/wallpaper/799/204/HD-wallpaper-farmers-agriculture-field-harvesting-farm-farmer-hard-working-workers-cultivation.jpg"
           alt="Your Company"
         />
         <div className="absolute top-0 left-0 z-40 bottom-0 right-0 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/25 sm:to-black/25"></div>
