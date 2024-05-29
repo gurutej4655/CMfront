@@ -8,7 +8,7 @@ function Category() {
       <Link to={"/category/rice"}>
         <CategoryCard
           title="Rice"
-          image="../../../categories/rice.jpg"
+          image="https://github.com/gurutej4655/CMfront/blob/main/categories/farmer.jpg"
         />
       </Link>
       <Link to={"/category/wheat"}>
