@@ -8,7 +8,7 @@ function Category() {
       <Link to={"/category/rice"}>
         <CategoryCard
           title="Rice"
-          image="categories/rice.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011416/download_j5vlxz.jpg"
         />
       </Link>
       <Link to={"/category/wheat"}>
