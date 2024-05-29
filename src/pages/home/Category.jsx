@@ -8,49 +8,49 @@ function Category() {
       <Link to={"/category/rice"}>
         <CategoryCard
           title="Rice"
-          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011416/download_j5vlxz.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011767/rice_hjgemr.jpg"
         />
       </Link>
       <Link to={"/category/wheat"}>
         <CategoryCard
           title="Wheat"
-          image="categories/wheat.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011887/wheat_tyxzww.jpg"
         />
       </Link>
       <Link to={"/category/nuts"}>
         <CategoryCard
           title="Nuts"
-          image="categories/nut.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011694/nut_pjtpag.jpg"
         />
       </Link>
       <Link to={"/category/sugar"}>
         <CategoryCard
           title="Sugar"
-          image="categories/sugar.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011829/sugar_dknuox.jpg"
         />
       </Link>
       <Link to={"/category/spices"}>
         <CategoryCard
           title="Spices"
-          image="categories/spices.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011792/spices_gevlwu.jpg"
         />
       </Link>
       <Link to={"/category/fruits"}>
         <CategoryCard
           title="Fruits"
-          image="categories/fruits.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011665/fruits_xmjfpm.jpg"
         />
       </Link>
       <Link to={"/category/vegetables"}>
         <CategoryCard
           title="Vegetables"
-          image="categories/veg.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011859/veg_ihracm.jpg"
         />
       </Link>
       <Link to={"/category/pulses"}>
         <CategoryCard
           title="Pulses"
-          image="categories/pulses.jpg"
+          image="http://res.cloudinary.com/ds1xih6dd/image/upload/v1717011732/pulses_pl5obp.jpg"
         />
       </Link>
     </div>
