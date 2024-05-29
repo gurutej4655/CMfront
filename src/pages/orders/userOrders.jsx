@@ -60,7 +60,7 @@ function userOrders() {
           Filter
         </label>
       </div>
-      <div className="w-2/3 items-center grid grid-cols-2 ">
+      <div className="w-2/3 items-center grid grid-cols-2 px-3">
         <select
           className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 mx-1 "
           required
